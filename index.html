@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lyuba's Notes</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1 class="page-title">Lyuba's Notes</h1>
+
+	<div class="section">
+		<h2 class="section-title">The Basics of the Web and HTML</h2>
+		<div class="section-content">
+			<div>The web is a bunch of computers that communicate with each other.</div>
+			<div>When a person goes to a web page like <a target="_blank" href="www.google.com">www.google.com</a>, their computer sends a HTTP Request to a server. The server finds the appropriate HTML document and sends it back to the user's computer where a web browser interprets the page and displays it on the user's screen. </div>
+			</div>
+	</div>
+
+	<div class="section">
+		<h2 class="section-title">HTML – Hyper Text Markup Language</h2>
+		<div class="section-content">
+			HTML is made up of:
+			<ul>
+				<li>Text content -> what you see</li>
+				<li>Markup -> what it looks like</li>
+				<li>References to -> e.g. images + videos</li>
+				<li>Links to other pages</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="section">
+		<h2 class="section-title">HTML Markup</h2>
+		<div class="section-content">
+			<div>(&lt;name&gt;content&lt;/name&gt;) - ELEMENT</div>
+			<div>&lt;name&gt; - opening tag</div>
+			<div>&lt;/name&gt; - closing tag</div>
+			<div>
+				<h3>Types of HTML Elements</h3>
+				<ul>
+					<li><b>Inline</b> - an inline element occupies only the space bounded by the tags that define the inline. Generally, inline elements may contain only data and other inline elements. By default, inline elements do not begin with new line.
+					</li>
+					<li><b>block</b> - block elements form an "invisiible box" around the content outside of them. By default, block elements begin with a new line</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Tree-like structure of HTML</h3>
+				<div>The "tree-like structure" comes from the fact that HTML elements can have other elements inside of them. <br>
+				In a browser, this structure shows up as a series of nested boxes. There are boxes inside of boxes inside of boxes, and so on...</div>
+			</div>
+			<div>
+				<h3>Relationships between indented HTML and boxes</h3>
+				<div>When you read an HTML document as text, you see a wave of changing indentations going up and down the left side of the document. The more indented an element is, the more deeply nested it's corresponding "box" is.</div>
+			</div>
+			<div>
+				<h3>The Box Model</h3>
+				<div>
+					<h4>Box Sizing</h4>
+					<ol>
+						<li>HTML elements are boxes and each box has 4 components</li>
+						<li>Because the are so many components to each box, it can pften be hard to get the box just right</li>
+						<li>
+							There are two techniques you can use to help deal with sizing issues:
+							<ol>
+								<li>Set sizes in terms of percents rather than pixels</li>
+								<li>Set the box-sizing attribute to border-box for every element</li>
+							</ol>
+						</li>
+						<li>Different browsers work slightly differently. Sometimes this causes different browsers to display the same code differently</li>
+					</ol>
+				</div>
+				<div>
+					<h3>Box Positioning</h3>
+					<ol>
+						<li>Divs are block elements (as opposed to inline), so by default they take up the entire width of a page</li>
+						<li>Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h2 class="section-title">Cascading Style Sheets (CSS)</h2>
+		<div class="section-content">
+			<div>
+				<div>CSS is code written to control the "style" of HTML elements.</div>
+				<div>Descendant elements may inherit CSS property values from any ancestor element enclosing them.</div>
+			</div>
+			<div>
+				<h3>Cascading</h3>
+				<div>The rules are applied not only to the elements they directly match but also to all those elements’ child elements.</div>
+			</div>
+			<div>
+				<h3>Avoid Repetition</h3>
+				<ol>
+					<li>The most specific rule is applied to every element</li>
+					<li>Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants.</li>
+					<li>Relies on the document tree. Descendant elements may inherit CSS property values from any ancestor element enclosing them.</li>
+					<li>Descendant elements inherit text-related properties, but box-related properties are not inherited.</li>
+				</ol>
+				<div>Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space and word-spacing.</div>
+				<div>Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index.</div>
+				<div><b>NOTE:</b> If a chilld element has multiple overlapping rules defined for it, the more specific rule takes effect.</div>
+			</div>
+			<div>
+				<h3>CSS Styling of a Page</h3>
+				<div>
+					There are several methods for applying styles to a HTML document.
+
+					<div>
+						<h4>Method 1</h4>
+						Write CSS in the &lt;head&gt; of the HTML. This method is suitable for small projects.
+					</div>
+					<div>
+						<h4>Method 2</h4>
+						Link the HTML to a separate CSS file. This method helps to stay more organized when working on big projects.
+					</div>
+					<div>
+						<h4>Method 3</h4>
+						Write styles inline with the HTML using the "style" attribute. This method is not recommended becasuse it causes a lot of code repetition.
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3>CSS Selectors</h3>
+				<ul>
+					<li>ID Selectors - the most powerful type of selector in terms of CSS specificity.</li>
+					<li>
+						Class Selectors.
+						<ul>
+							<li>well supported in all browsers</li>
+							<li>you can add multiple classes (just separated by a space) on HTML elements</li>
+							<li>there are JavaScript things you can do specifically for manipulating classes</li>
+						</ul>
+					</li>
+					<li>
+						Tag Selectors
+						<ul>
+							<li>
+								most useful when changing properties that are unique to that HTML element
+							</li>
+							<li>also in reset stylesheets where you are specifically trying to unset styles that browsers apply to certain elements</li>
+						</ul>
+						<div><b>Note:</b>  Don't rely on tag selectors too much though. It's typically more useful to have a class define styling that you can use on any HTML element.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h2 class="section-title">Code, Test, Refine</h2>
+		<div class="section-content">
+			<ol>
+				<li>Look for natural boxes\</li>
+				<li>Look for repeated styles and semantic elements</li>
+				<li>Write your HTML</li>
+				<li>Apply styles (from biggest to smallest)</li>
+				<li>Fix things</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>
