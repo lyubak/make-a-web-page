@@ -1,0 +1,30 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+.page-title {
+	padding-left: 10px;
+}
+
+.section {
+	margin: 10px;
+	padding: 10px;
+	padding-top: 1px;
+	padding-bottom: 14px;
+	background: lightblue;
+	border-radius: 10px;
+}
+
+
+.section-title {
+	border-bottom: 2px solid navy;
+	margin-bottom: 5px;
+}
+
+.section-content {
+	background-color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 10px;
+}
